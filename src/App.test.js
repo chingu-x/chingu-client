@@ -8,7 +8,15 @@ import App from './App';
 // Configure Enzyme adapter
 Enzyme.configure({ adapter: new Adapter() });
 
-it('renders app component', () => {
-  const wrapper = shallow(<App />);
-  expect(wrapper).toMatchSnapshot();
+describe('App component', () => {
+  it('Renders App component', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('Contains a div wrapper with a message', () => {
+    const wrapper = shallow(<App />);
+    const message = <div>Chingu Developers Network</div>
+    expect(wrapper.contains(message)).toEqual(true);
+  });
 });
