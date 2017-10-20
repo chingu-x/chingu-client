@@ -59,6 +59,3 @@ typings/
 
 # locks
 package-lock.json
-
-# jest snapshots
-src/__snapshots__
