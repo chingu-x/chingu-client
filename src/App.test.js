@@ -16,7 +16,7 @@ describe('App component', () => {
 
   it('Contains a div wrapper with a message', () => {
     const wrapper = shallow(<App />);
-    const message = <div>Chingu Developers Network</div>
+    const message = <div>Chingu Developers Network</div>;
     expect(wrapper.contains(message)).toEqual(true);
   });
 });
