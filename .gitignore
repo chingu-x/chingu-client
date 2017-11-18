@@ -61,4 +61,4 @@ typings/
 package-lock.json
 
 # snapshots
-src/__snapshots__
+src/__snapshots__/*
