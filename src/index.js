@@ -6,6 +6,7 @@ import { HttpLink } from "apollo-link-http";
 import { BrowserRouter } from "react-router-dom";
 import { InMemoryCache } from "apollo-cache-inmemory";
 
+import "../node_modules/materialize-css/dist/css/materialize.min.css";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
