@@ -5,6 +5,7 @@ import Navbar from "./components/Misc/Navbar";
 import LandingPage from "./components/Home/LandingPage";
 import Profile from "./components/Profile/Profile";
 import SignUp from "./components/SignUp/SignUp";
+import Login from "./components/Login/Login";
 import Footer from "./components/Misc/Footer";
 import "./App.css";
 
@@ -17,6 +18,7 @@ class App extends Component {
         <Route exact path="/" component={LandingPage} />
         <Route path="/profile" component={Profile} />
         <Route path="/signup" component={SignUp} />
+        <Route path="/login" component={Login} />
 
         <Footer />
       </div>
