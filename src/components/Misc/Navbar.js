@@ -7,7 +7,7 @@ const Navbar = props => (
   <nav className="green accent-3">
     <div className="nav-wrapper">
       <Link to="/" className="brand-logo">
-        Chingu
+        친구
       </Link>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>

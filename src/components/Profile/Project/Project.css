@@ -1,0 +1,17 @@
+.project {
+  margin-bottom: 1rem;
+}
+
+.project img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.project strong {
+  font-weight: 600;
+}
