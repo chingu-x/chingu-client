@@ -91,8 +91,7 @@ class Profile extends Component {
                 />
               </div>
               <p className="center">
-                view more{" "}
-                <i className="material-icons">arrow_drop_down_circle</i>
+                <i className="material-icons small">arrow_drop_down_circle</i>
               </p>
             </div>
             {/* End Cohorts */}

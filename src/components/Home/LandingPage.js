@@ -30,7 +30,6 @@ class LandingPage extends Component {
         <div className="container">
           <section className="section">
             <div className="row">
-
               <Step
                 icon="face"
                 title="Individuals"
@@ -48,7 +47,6 @@ class LandingPage extends Component {
                 title="Projects"
                 description="As a team, you'll decide on your project, and will have a span of two months to complete and ship it. This is what we call, build to learn."
               />
-
             </div>
           </section>
         </div>
