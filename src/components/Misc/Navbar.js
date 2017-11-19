@@ -14,6 +14,9 @@ const Navbar = props => (
           <Link to="/profile">Profile</Link>
         </li>
         <li>
+          <Link to="/signup">Sign up</Link>
+        </li>
+        <li>
           <Link to="/">Logout</Link>
         </li>
       </ul>
