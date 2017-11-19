@@ -1,0 +1,10 @@
+.signup {
+  background: url(/img/signup.png) repeat center center fixed;
+  padding: 1rem;
+}
+
+.signup .signup-form {
+  box-shadow: 2px 2px 6px 0px #bdbdbd;
+  margin: 3rem 0;
+  padding: 0 2rem;
+}
