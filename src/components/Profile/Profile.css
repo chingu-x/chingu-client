@@ -1,0 +1,24 @@
+.header {
+  margin-top: 5rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.header img {
+  width: 100%;
+  border-radius: 50%;
+  position: relative;
+  top: -2rem;
+}
+
+.header p {
+  margin-top: 0;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
