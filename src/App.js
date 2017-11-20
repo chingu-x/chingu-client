@@ -6,7 +6,7 @@ import LandingPage from "./components/Home/LandingPage";
 import Profile from "./components/Profile/Profile";
 import SignUp from "./components/SignUp/SignUp";
 import Login from "./components/Login/Login";
-import Footer from "./components/Misc/Footer";
+import Footer from "./components/Misc/MainFooter";
 import "./App.css";
 
 class App extends Component {
