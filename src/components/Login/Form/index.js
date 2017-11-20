@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
 
 class Form extends Component {
   constructor(props) {
@@ -11,7 +13,21 @@ class Form extends Component {
 
   handleLogin(e) {
     e.preventDefault();
-    console.log("The form was submitted");
+
+    this.props
+      .mutate({
+        variables: {
+          email: this.state.email,
+          password: this.state.password
+        }
+      })
+      .then(({ data }) => {
+        window.localStorage.setItem("token", data.signInUser.jwt);
+        window.location = "/";
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   render() {
@@ -56,4 +72,12 @@ class Form extends Component {
   }
 }
 
-export default Form;
+const loginMutation = gql`
+  mutation userLogin($email: String!, $password: String!) {
+    signInUser(email: $email, password: $password) {
+      jwt
+    }
+  }
+`;
+
+export default graphql(loginMutation)(Form);
