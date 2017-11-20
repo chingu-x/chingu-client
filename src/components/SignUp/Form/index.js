@@ -24,6 +24,8 @@ class SignUpForm extends Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         let { email, first_name, last_name, github_url, password } = values;
+        console.log(values);
+
         this.props
           .mutate({
             variables: {
@@ -132,12 +134,12 @@ const registerUser = gql`
   ) {
     createUser(
       user_data: {
-        email: $email
         first_name: $first_name
         last_name: $last_name
         github_url: $github_url
       }
       password: $password
+      email: $email
     ) {
       email
     }
