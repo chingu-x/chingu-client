@@ -35,8 +35,10 @@ class SignUpForm extends Component {
             }
           })
           .then(({ data }) => {
+            window.localStorage.setItem("user_id", data.createUser.user.id);
+            window.localStorage.setItem("token", data.createUser.jwt);
             console.log(data);
-            window.location = "/";
+            window.location = "/profile/" + data.createUser.user.id;
           })
           .catch(err => {
             console.error(err);
@@ -132,14 +134,17 @@ const registerUser = gql`
   ) {
     createUser(
       user_data: {
-        email: $email
         first_name: $first_name
         last_name: $last_name
         github_url: $github_url
       }
+      email: $email
       password: $password
     ) {
-      email
+      jwt
+      user {
+        id
+      }
     }
   }
 `;

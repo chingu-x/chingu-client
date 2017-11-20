@@ -35,11 +35,12 @@ class LoginForm extends Component {
             }
           })
           .then(({ data }) => {
+            window.localStorage.setItem("user_id", data.signInUser.user.id);
             window.localStorage.setItem("token", data.signInUser.jwt);
             this.setState({
               loading: false
             });
-            window.location = "/";
+            window.location = "/profile/" + data.signInUser.user.id;
           })
           .catch(err => {
             console.error(err);
@@ -103,6 +104,9 @@ const loginMutation = gql`
   mutation userLogin($email: String!, $password: String!) {
     signInUser(email: $email, password: $password) {
       jwt
+      user {
+        id
+      }
     }
   }
 `;
