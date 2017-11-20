@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
 
 class Form extends Component {
   constructor(props) {
@@ -13,7 +15,23 @@ class Form extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log("I was triggered");
+
+    this.props
+      .mutate({
+        variables: {
+          first_name: this.state.first_name,
+          last_name: this.state.last_name,
+          email: this.state.email,
+          password: this.state.password
+        }
+      })
+      .then(({ data }) => {
+        console.log(data);
+        window.location = "/";
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   render() {
@@ -80,4 +98,25 @@ class Form extends Component {
   }
 }
 
-export default Form;
+const registerUser = gql`
+  mutation registerUser(
+    $first_name: String!
+    $last_name: String!
+    $email: String!
+    $password: String!
+  ) {
+    createUser(
+      user_data: {
+        email: $email
+        first_name: $first_name
+        last_name: $last_name
+        github_url: "https://github.com/Oxyrus"
+      }
+      password: $password
+    ) {
+      email
+    }
+  }
+`;
+
+export default graphql(registerUser)(Form);
