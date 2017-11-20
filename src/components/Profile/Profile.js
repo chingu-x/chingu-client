@@ -1,12 +1,40 @@
 import React, { Component } from "react";
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
 
 import Project from "./Project";
-import Badge from "./Badge";
 import Cohort from "./Cohort";
 import "./Profile.css";
 
 class Profile extends Component {
+  componentWillMount() {
+    console.log(this.props.match.params.id);
+  }
+
   render() {
+    let { loading, error, user } = this.props.data;
+    if (loading) {
+      return (
+        <div className="preloader-wrapper big active">
+          <div className="spinner-layer spinner-blue-only">
+            <div className="circle-clipper left">
+              <div className="circle" />
+            </div>
+            <div className="gap-patch">
+              <div className="circle" />
+            </div>
+            <div className="circle-clipper right">
+              <div className="circle" />
+            </div>
+          </div>
+        </div>
+      );
+    } else if (error) {
+      return <h1>An error ocurred</h1>;
+    } else if (!user) {
+      return <h1>User not found</h1>;
+    }
+
     return (
       <div className="container">
         {/* Header */}
@@ -14,20 +42,29 @@ class Profile extends Component {
           <div className="row">
             <div className="col m3 s12">
               <img src="http://lorempixel.com/200/200/abstract/" alt="Avatar" />
-              <p className="grey-text center">Amman, Jordan</p>
+              <p className="grey-text center">
+                {user.country ? user.country.name : "No location provided"}
+              </p>
             </div>
             <div className="col m9 s12">
-              <h2>Musaab Bakhiet</h2>
+              <h2>
+                {user.first_name} {user.last_name}
+              </h2>
               <ul>
-                <li>
-                  <a href="#!">GitHub</a>
-                </li>
-                <li>
-                  <a href="#!">Twitter</a>
-                </li>
-                <li>
-                  <a href="#!">Blog</a>
-                </li>
+                {user.github_url ? (
+                  <li>
+                    <a href={user.github_url}>GitHub</a>
+                  </li>
+                ) : (
+                  <li>N/A</li>
+                )}
+                {user.twitter_url ? (
+                  <li>
+                    <a href="#!">Twitter</a>
+                  </li>
+                ) : (
+                  <li>No Twitter</li>
+                )}
               </ul>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -45,6 +82,12 @@ class Profile extends Component {
             <h4>Projects</h4>
 
             <div className="row">
+              {user.projects ? (
+                user.projects.map(project => <Project />)
+              ) : (
+                <h6>The user has no projects yet</h6>
+              )}
+
               <Project
                 name="Chingu Developers Network"
                 description="The state of the art when it comes to developer collaboration, allowing hundreds of people from all over the world to connect with each other."
@@ -60,23 +103,16 @@ class Profile extends Component {
 
           {/* Skills & Cohorts */}
           <div className="col s12 m3 offset-m1">
-            {/* Skills */}
-            <div>
-              <h4>Skills</h4>
-
-              <div className="row">
-                <Badge name="Node" />
-                <Badge name="Polymer" />
-                <Badge name="GraphQL" />
-              </div>
-            </div>
-            {/* End Skills */}
-
             {/* Cohorts */}
             <div>
               <h4>Cohorts</h4>
 
               <div className="row">
+                {user.cohorts ? (
+                  user.cohorts.map(cohort => <Cohort />)
+                ) : (
+                  <h6>User hasn't been member of any cohorts</h6>
+                )}
                 <Cohort
                   name="Voyage 2"
                   members="320"
@@ -103,4 +139,21 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+const userQuery = gql`
+  query userProfile($userId: ID!) {
+    user(user_id: $userId) {
+      first_name
+      last_name
+      github_url
+      twitter_url
+    }
+  }
+`;
+
+export default graphql(userQuery, {
+  options: ownProps => ({
+    variables: {
+      userId: ownProps.match.params.id
+    }
+  })
+})(Profile);
