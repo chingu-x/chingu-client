@@ -1,55 +1,86 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Layout, Steps, Icon, Row, Col } from "antd";
 
 import "./Home.css";
-import Step from "./Step";
+
+const { Content } = Layout;
+const Step = Steps.Step;
 
 class LandingPage extends Component {
   render() {
     return (
       <div>
-        <section className="section green accent-3 white-text text-darken-4">
-          <div className="container">
-            <h1 className="header center">Chingu Cohorts</h1>
-            <div className="row center">
-              <h5 className="header col s12 light">
-                Building amazing projects, gain real experience
-              </h5>
-            </div>
-            <div className="row center">
-              <Link
-                to="/apply"
-                className="btn waves-effect waves-light light-blue accent-3"
-              >
-                Apply
-              </Link>
-            </div>
-          </div>
-        </section>
+        <Content style={{ margin: "60px 0" }}>
+          <Row type="flex" justify="center">
+            <Col sm={20} md={16} lg={12}>
+              <img className="chingu-logo" src="/img/chingu.png" alt="Chingu" />
+              <h1 className="subtitle">
+                Chingu facilitates global collaboration on projects in a
+                structure focused on improving skills
+              </h1>
+            </Col>
+          </Row>
+        </Content>
 
-        <div className="container">
-          <section className="section">
-            <div className="row">
-              <Step
-                icon="face"
-                title="Individuals"
-                description="We believe in learning by building real projects, when you apply to Chingu, this is just the beginning of the adventure."
-              />
+        <Content style={{ padding: "0 50px" }}>
+          <Row type="flex" justify="center">
+            <Col sm={24} md={20} lg={16}>
+              <Steps className="horizontal-steps">
+                <Step
+                  status="finish"
+                  title="Apply"
+                  icon={<Icon type="user" />}
+                  description="Your adventure starts the moment you decide to join Chingu."
+                />
+                <Step
+                  status="finish"
+                  title="Join a team"
+                  icon={<Icon type="team" />}
+                  description="Get placed in a team of Chingus eager to learn."
+                />
+                <Step
+                  status="finish"
+                  title="Build projects"
+                  icon={<Icon type="layout" />}
+                  description="Decide on a project you believe, and build it."
+                />
+                <Step
+                  status="process"
+                  title="Succeed"
+                  icon={<Icon type="smile-o" />}
+                  description="Get a job, keep applying or do both."
+                />
+              </Steps>
 
-              <Step
-                icon="group"
-                title="Teams"
-                description="Once you're accepted into Chingu, you'll be paired with people at your same skill level and a more advanced project manager."
-              />
-
-              <Step
-                icon="flag"
-                title="Projects"
-                description="As a team, you'll decide on your project, and will have a span of two months to complete and ship it. This is what we call, build to learn."
-              />
-            </div>
-          </section>
-        </div>
+              <Steps direction="vertical" className="vertical-steps">
+                <Step
+                  status="finish"
+                  title="Apply"
+                  icon={<Icon type="user" />}
+                  description="Your adventure starts the moment you decide to join Chingu."
+                />
+                <Step
+                  status="finish"
+                  title="Join a team"
+                  icon={<Icon type="team" />}
+                  description="Get placed in a team of Chingus eager to learn."
+                />
+                <Step
+                  status="finish"
+                  title="Build projects"
+                  icon={<Icon type="layout" />}
+                  description="Decide on a project you believe, and build it."
+                />
+                <Step
+                  status="process"
+                  title="Succeed"
+                  icon={<Icon type="smile-o" />}
+                  description="Get a job, keep applying or do both."
+                />
+              </Steps>
+            </Col>
+          </Row>
+        </Content>
       </div>
     );
   }
