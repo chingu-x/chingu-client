@@ -43,7 +43,9 @@ class Form extends Component {
                 value={this.state.email}
                 onChange={e => this.setState({ email: e.target.value })}
               />
-              <label htmlFor="email">Email</label>
+              <label className="active" htmlFor="email">
+                Email
+              </label>
             </div>
           </div>
           <div className="row">
@@ -55,7 +57,9 @@ class Form extends Component {
                 value={this.state.password}
                 onChange={e => this.setState({ password: e.target.value })}
               />
-              <label htmlFor="password">Password</label>
+              <label className="active" htmlFor="password">
+                Password
+              </label>
             </div>
           </div>
           <div className="row center">
