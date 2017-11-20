@@ -11,7 +11,7 @@ const Navbar = props => (
       </Link>
       <ul id="nav-mobile" className="right hide-on-med-and-down">
         <li>
-          <Link to="/profile">Profile</Link>
+          <Link to="/profile/2">Profile</Link>
         </li>
         <li>
           <Link to="/signup">Sign up</Link>
