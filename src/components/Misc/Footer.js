@@ -7,9 +7,8 @@ const Footer = props => (
         <div className="col l8 s12">
           <h5 className="white-text">About us</h5>
           <p className="white-text darken-1">
-            Chingu is a non profit organization whose goal is to provide
-            developers from all around the globe the opportunity to build real
-            projects, in a creative and estimulating environment.
+            The Chingu Developer Network facilitates global collaboration on
+            projects in a structure focused on improving skills
           </p>
         </div>
 
