@@ -4,8 +4,10 @@ import { Layout } from "antd";
 const { Footer } = Layout;
 
 const MainFooter = props => (
-  <Layout>
-    <Footer style={{ textAlign: "center" }}>Made by Chingu X.</Footer>
+  <Layout style={{ marginTop: "60px" }}>
+    <Footer style={{ textAlign: "center" }}>
+      Made by <a href="https://github.com/chingu-x">Chingu X</a>
+    </Footer>
   </Layout>
 );
 
