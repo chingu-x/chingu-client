@@ -18,7 +18,7 @@ class LandingPage extends Component {
             </div>
             <div className="row center">
               <Link
-                to="/"
+                to="/apply"
                 className="btn waves-effect waves-light light-blue accent-3"
               >
                 Apply
