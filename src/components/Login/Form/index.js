@@ -22,8 +22,9 @@ class Form extends Component {
         }
       })
       .then(({ data }) => {
+        window.localStorage.setItem("user_id", data.signInUser.user.id);
         window.localStorage.setItem("token", data.signInUser.jwt);
-        window.location = "/";
+        window.location = "/profile/" + data.signInUser.user.id;
       })
       .catch(err => {
         console.error(err);
@@ -79,6 +80,9 @@ class Form extends Component {
 const loginMutation = gql`
   mutation userLogin($email: String!, $password: String!) {
     signInUser(email: $email, password: $password) {
+      user {
+        id
+      }
       jwt
     }
   }
