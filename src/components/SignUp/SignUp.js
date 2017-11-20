@@ -10,7 +10,7 @@ class SignUp extends Component {
         <div className="container">
           <div className="row">
             <div className="col m6 offset-m3 grey lighten-5 signup-form">
-              <h1 className="center">Sign Up</h1>
+              <h1 className="center">Apply</h1>
               <Form />
             </div>
           </div>

@@ -89,7 +89,7 @@ class Form extends Component {
               type="submit"
               className="waves-effect waves-light light-blue accent-3 btn"
             >
-              Register
+              Send
             </button>
           </div>
         </form>
