@@ -7,8 +7,16 @@ import "./Navbar.css";
 const { Header } = Layout;
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      user_id: window.localStorage.getItem("user_id")
+    };
+  }
+
   handleLogout = e => {
     e.preventDefault();
+    window.localStorage.removeItem("user_id");
     window.localStorage.removeItem("token");
     window.location = "/";
   };
