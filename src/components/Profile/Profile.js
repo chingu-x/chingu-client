@@ -46,9 +46,7 @@ class Profile extends Component {
               <p className="text-center">United States</p>
             </Col>
             <Col sm={24} md={16} lg={18}>
-              <h2>
-                {user.first_name} {user.last_name}
-              </h2>
+              <h2>Patrick Cleary</h2>
               <ul>
                 <li>
                   <a href="#!">GitHub</a>
@@ -61,7 +59,7 @@ class Profile extends Component {
                 </li>
               </ul>
               <p className="bio">
-                {user.bio ? user.bio : "User has no bio yet"}
+                Chemical Engineer turned into programmer. Night creature.
               </p>
             </Col>
           </Row>
