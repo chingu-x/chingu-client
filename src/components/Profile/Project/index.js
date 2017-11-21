@@ -9,7 +9,7 @@ const Project = props => (
       <img
         alt="example"
         width="100%"
-        src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+        src={props.image_url}
       />
     </div>
     <div className="content">

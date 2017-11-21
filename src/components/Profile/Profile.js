@@ -39,26 +39,26 @@ class Profile extends Component {
         <div className="section header" style={{ marginTop: "3rem" }}>
           <Row type="flex" justify="center">
             <Col sm={24} md={8} lg={6}>
-              <img src="http://lorempixel.com/200/200/abstract/" alt="Avatar" />
-              <p className="text-center">
-                {user.country ? user.country.name : "No location provided"}
-              </p>
+              <img
+                src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                alt="Avatar"
+              />
+              <p className="text-center">United States</p>
             </Col>
             <Col sm={24} md={16} lg={18}>
               <h2>
                 {user.first_name} {user.last_name}
               </h2>
               <ul>
-                {user.github_url ? (
-                  <li>
-                    <a href={user.github_url}>GitHub</a>
-                  </li>
-                ) : null}
-                {user.twitter_url ? (
-                  <li>
-                    <a href={user.twitter_url}>Twitter</a>
-                  </li>
-                ) : null}
+                <li>
+                  <a href="#!">GitHub</a>
+                </li>
+                <li>
+                  <a href="#!">Twitter</a>
+                </li>
+                <li>
+                  <a href="#!">Blog</a>
+                </li>
               </ul>
               <p className="bio">
                 {user.bio ? user.bio : "User has no bio yet"}
@@ -72,21 +72,30 @@ class Profile extends Component {
             <Col sm={24} md={16}>
               <h3>Projects</h3>
               <Row type="flex" gutter={16}>
-                {user.projects.length > 0
-                  ? user.projects.map((project, index) => {
-                      return <Project {...project} key={index} />;
-                    })
-                  : "User doesn't have any projects."}
+                <Col md={12}>
+                  <Project
+                    title="AutoBot"
+                    image_url="https://i.imgur.com/xI6mzlh.png?1"
+                    description="Tool to automatically monitor and moderate Chingu Voyages in parallel"
+                    github_url="https://github.com/chingu-x/AutoBot"
+                    users={[{ username: "Daniel Segovia" }]}
+                  />
+                </Col>
+                <Col md={12}>
+                  <Project
+                    title="ChinguChimp"
+                    image_url="https://camo.githubusercontent.com/221467b6cd3432144757a1527aee2403a55dbc49/68747470733a2f2f692e696d6775722e636f6d2f465730725746692e706e67"
+                    description="Profile bot to handle updating, viewing and sharing Chingu user profiles"
+                    github_url="https://github.com/chingu-x/ChinguChimp"
+                    users={[{ username: "Daniel Segovia" }]}
+                  />
+                </Col>
               </Row>
             </Col>
             <Col sm={24} md={8}>
               <h3>Cohorts</h3>
               <Row type="flex" gutter={16}>
-                {user.cohorts.length > 0
-                  ? user.cohorts.map((cohort, index) => {
-                      return <Cohort {...cohort} key={index} />;
-                    })
-                  : "User hasn't been part of any cohorts yet."}
+                <Cohort name="Voyage 2" members="243" />
               </Row>
             </Col>
           </Row>
