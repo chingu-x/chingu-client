@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
 import gql from "graphql-tag";
+import { Form, Icon, Input, Button } from "antd";
 
-class Form extends Component {
+import "./form.css";
+
+const FormItem = Form.Item;
+
+class SignUpForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,95 +18,110 @@ class Form extends Component {
     };
   }
 
-  handleSubmit(e) {
+  handleSignUp = e => {
     e.preventDefault();
 
-    this.props
-      .mutate({
-        variables: {
-          first_name: this.state.first_name,
-          last_name: this.state.last_name,
-          email: this.state.email,
-          password: this.state.password
-        }
-      })
-      .then(({ data }) => {
-        console.log(data);
-        window.location = "/";
-      })
-      .catch(err => {
-        console.error(err);
-      });
-  }
+    this.props.form.validateFields((err, values) => {
+      if (!err) {
+        let { email, first_name, last_name, github_url, password } = values;
+        console.log(values);
+
+        this.props
+          .mutate({
+            variables: {
+              email,
+              first_name,
+              last_name,
+              github_url,
+              password
+            }
+          })
+          .then(({ data }) => {
+            window.localStorage.setItem("user_id", data.createUser.user.id);
+            window.localStorage.setItem("token", data.createUser.jwt);
+            console.log(data);
+            window.location = "/profile/" + data.createUser.user.id;
+          })
+          .catch(err => {
+            console.error(err);
+          });
+      }
+    });
+  };
 
   render() {
+    const { getFieldDecorator } = this.props.form;
     return (
-      <div className="row">
-        <form onSubmit={e => this.handleSubmit(e)} className="col s12">
-          <div className="row">
-            <div className="input-field col s6">
-              <input
-                id="first_name"
-                type="text"
-                className="active validate"
-                value={this.state.first_name}
-                onChange={e => this.setState({ first_name: e.target.value })}
-              />
-              <label className="active" htmlFor="first_name">
-                First Name
-              </label>
-            </div>
-            <div className="input-field col s6">
-              <input
-                id="last_name"
-                type="text"
-                className="active validate"
-                value={this.state.last_name}
-                onChange={e => this.setState({ last_name: e.target.value })}
-              />
-              <label className="active" htmlFor="last_name">
-                Last Name
-              </label>
-            </div>
-          </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <input
-                id="email"
-                type="email"
-                className="active validate"
-                value={this.state.email}
-                onChange={e => this.setState({ email: e.target.value })}
-              />
-              <label className="active" htmlFor="email">
-                Email
-              </label>
-            </div>
-          </div>
-          <div className="row">
-            <div className="input-field col s12">
-              <input
-                id="password"
-                type="password"
-                className="validate"
-                value={this.state.password}
-                onChange={e => this.setState({ password: e.target.value })}
-              />
-              <label className="active" htmlFor="password">
-                Password
-              </label>
-            </div>
-          </div>
-          <div className="row center">
-            <button
-              type="submit"
-              className="waves-effect waves-light light-blue accent-3 btn"
-            >
-              Send
-            </button>
-          </div>
-        </form>
-      </div>
+      <Form onSubmit={this.handleSignUp} className="signup-form">
+        <FormItem>
+          {getFieldDecorator("email", {
+            rules: [{ required: true, message: "Please input your email!" }]
+          })(
+            <Input
+              prefix={<Icon type="global" style={{ fontSize: 13 }} />}
+              type="email"
+              placeholder="Email"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator("first_name", {
+            rules: [
+              { required: true, message: "Please input your first name!" }
+            ]
+          })(
+            <Input
+              prefix={<Icon type="user" style={{ fontSize: 13 }} />}
+              type="text"
+              placeholder="First name"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator("last_name", {
+            rules: [{ required: true, message: "Please input your last name!" }]
+          })(
+            <Input
+              prefix={<Icon type="team" style={{ fontSize: 13 }} />}
+              type="text"
+              placeholder="Last name"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator("github_url", {
+            rules: [
+              { required: true, message: "Please input your GitHub URL!" }
+            ]
+          })(
+            <Input
+              prefix={<Icon type="github" style={{ fontSize: 13 }} />}
+              type="text"
+              placeholder="GitHub URL"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator("password", {
+            rules: [{ required: true, message: "Please input your password!" }]
+          })(
+            <Input
+              prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
+              type="password"
+              placeholder="Password"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="signup-form-button"
+          >
+            Register
+          </Button>
+        </FormItem>
+      </Form>
     );
   }
 }
@@ -111,20 +131,27 @@ const registerUser = gql`
     $first_name: String!
     $last_name: String!
     $email: String!
+    $github_url: String!
     $password: String!
   ) {
     createUser(
       user_data: {
-        email: $email
         first_name: $first_name
         last_name: $last_name
-        github_url: "https://github.com/Oxyrus"
+        github_url: $github_url
       }
+      email: $email
       password: $password
+      email: $email
     ) {
-      email
+      jwt
+      user {
+        id
+      }
     }
   }
 `;
 
-export default graphql(registerUser)(Form);
+const wrappedForm = Form.create()(SignUpForm);
+
+export default graphql(registerUser)(wrappedForm);

@@ -1,36 +1,46 @@
 import React from "react";
+import { Card } from "antd";
 
 import "./Project.css";
 
 const Project = props => (
-  <div className="col s12 grey lighten-4 project">
-    <div className="project-container">
-      <div className="row">
-        <div className="col s12 m4">
-          <img
-            src="https://lorempixel.com/400/400/nature/"
-            alt="Project thumbnail"
-          />
-        </div>
-        <div className="col s12 m8">
-          <h5>{props.name}</h5>
-          <ul>
-            <li>
-              <a href="#!">Live</a>
-            </li>
-            <li>
-              <a href="#!">GitHub</a>
-            </li>
-          </ul>
-          <p>{props.description}</p>
-          <p>
-            <strong>Team:</strong> <a href="#!">Oxyrus</a>,{" "}
-            <a href="#!">Vampiire</a>
-          </p>
-        </div>
-      </div>
+  <Card>
+    <div className="image">
+      <img
+        alt="example"
+        width="100%"
+        src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
+      />
     </div>
-  </div>
+    <div className="content">
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
+
+      <ul>
+        <li>
+          {props.github_url ? (
+            <a href={props.github_url}>Github</a>
+          ) : (
+            "No GitHub"
+          )}
+        </li>
+        <li>
+          {props.project_url ? (
+            <a href={props.project_url}>Live</a>
+          ) : (
+            "No Project URL"
+          )}
+        </li>
+      </ul>
+
+      <strong>Team</strong>
+      <ul>
+        {props.users.map(user => {
+          return <li key={user.username}>{user.username}</li>;
+        })}
+      </ul>
+    </div>
+  </Card>
 );
 
 export default Project;

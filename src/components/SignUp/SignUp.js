@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Row, Col } from "antd";
 
 import Form from "./Form";
 import "./SignUp.css";
@@ -7,14 +8,12 @@ class SignUp extends Component {
   render() {
     return (
       <div className="signup">
-        <div className="container">
-          <div className="row">
-            <div className="col m6 offset-m3 grey lighten-5 signup-form">
-              <h1 className="center">Apply</h1>
-              <Form />
-            </div>
-          </div>
-        </div>
+        <h1 style={{ textAlign: "center" }}>Sign Up</h1>
+        <Row type="flex" justify="center">
+          <Col xs={24} md={12} lg={8}>
+            <Form />
+          </Col>
+        </Row>
       </div>
     );
   }

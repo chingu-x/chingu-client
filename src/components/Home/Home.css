@@ -1,7 +1,21 @@
-.icon-block {
-  padding: 0 15px;
+.chingu-logo {
+  display: flex;
+  margin: 0 auto;
 }
 
-.icon-block .material-icons {
-  font-size: inherit;
+.subtitle {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .horizontal-steps {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .vertical-steps {
+    display: none;
+  }
 }

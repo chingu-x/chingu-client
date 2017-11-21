@@ -7,7 +7,6 @@ import { setContext } from "apollo-link-context";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { BrowserRouter } from "react-router-dom";
 
-import "../node_modules/materialize-css/dist/css/materialize.min.css";
 import "./index.css";
 import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
