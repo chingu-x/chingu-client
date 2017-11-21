@@ -36,7 +36,7 @@ class Profile extends Component {
 
     return (
       <Content>
-        <div className="section header" style={{ marginTop: "4rem" }}>
+        <div className="section header" style={{ marginTop: "3rem" }}>
           <Row type="flex" justify="center">
             <Col sm={24} md={8} lg={6}>
               <img src="http://lorempixel.com/200/200/abstract/" alt="Avatar" />
@@ -56,7 +56,7 @@ class Profile extends Component {
                 ) : null}
                 {user.twitter_url ? (
                   <li>
-                    <a href="#!">Twitter</a>
+                    <a href={user.twitter_url}>Twitter</a>
                   </li>
                 ) : null}
               </ul>
