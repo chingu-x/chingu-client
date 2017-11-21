@@ -53,16 +53,12 @@ class Profile extends Component {
                   <li>
                     <a href={user.github_url}>GitHub</a>
                   </li>
-                ) : (
-                  <li>N/A</li>
-                )}
+                ) : null}
                 {user.twitter_url ? (
                   <li>
                     <a href="#!">Twitter</a>
                   </li>
-                ) : (
-                  <li>No Twitter</li>
-                )}
+                ) : null}
               </ul>
               <p className="bio">
                 {user.bio ? user.bio : "User has no bio yet"}
@@ -75,23 +71,23 @@ class Profile extends Component {
           <Row type="flex" justify="center" gutter={16}>
             <Col sm={24} md={16}>
               <h3>Projects</h3>
-              {user.projects ? (
-                user.projects.map(project => {
-                  return <Project {...project} />;
-                })
-              ) : (
-                <p>User doesn't have any projects yet.</p>
-              )}
+              <Row type="flex" gutter={16}>
+                {user.projects.length > 0
+                  ? user.projects.map((project, index) => {
+                      return <Project {...project} key={index} />;
+                    })
+                  : "User doesn't have any projects."}
+              </Row>
             </Col>
             <Col sm={24} md={8}>
               <h3>Cohorts</h3>
-              {user.cohorts ? (
-                user.cohorts.map(cohort => {
-                  return <Cohort {...cohort} />;
-                })
-              ) : (
-                <p>User hasn't been part of any cohorts yet.</p>
-              )}
+              <Row type="flex" gutter={16}>
+                {user.cohorts.length > 0
+                  ? user.cohorts.map((cohort, index) => {
+                      return <Cohort {...cohort} key={index} />;
+                    })
+                  : "User hasn't been part of any cohorts yet."}
+              </Row>
             </Col>
           </Row>
         </div>
