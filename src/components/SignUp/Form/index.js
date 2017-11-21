@@ -118,7 +118,7 @@ class SignUpForm extends Component {
             htmlType="submit"
             className="signup-form-button"
           >
-            Apply
+            Register
           </Button>
         </FormItem>
       </Form>
