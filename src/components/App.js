@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
-import Navbar from "./components/Misc/Navbar";
-import LandingPage from "./components/Home/LandingPage";
-import Profile from "./components/Profile/Profile";
-import SignUp from "./components/SignUp/SignUp";
-import Login from "./components/Login/Login";
-import Footer from "./components/Misc/MainFooter";
+import Navbar from "./Misc/Navbar";
+import LandingPage from "./Home/LandingPage";
+import Profile from "./Profile/Profile";
+import SignUp from "./SignUp/SignUp";
+import Login from "./Login/Login";
+import Footer from "./Misc/MainFooter";
 import "./App.css";
 
 class App extends Component {
