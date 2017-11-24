@@ -5,11 +5,12 @@ import { Row, Col, Layout, Spin } from "antd";
 
 import Project from "./Project";
 import Cohort from "./Cohort";
+import userQuery from "./query";
 import "./Profile.css";
 
 const { Content } = Layout;
 
-class Profile extends Component {
+export class Profile extends Component {
   render() {
     let { loading, error, user } = this.props.data;
     if (loading) {
@@ -109,31 +110,6 @@ class Profile extends Component {
     );
   }
 }
-
-const userQuery = gql`
-  query userProfile($userId: ID!) {
-    user(user_id: $userId) {
-      first_name
-      last_name
-      github_url
-      twitter_url
-      projects {
-        title
-        description
-        github_url
-        project_url
-        users {
-          username
-        }
-      }
-      cohorts {
-        users {
-          username
-        }
-      }
-    }
-  }
-`;
 
 export default graphql(userQuery, {
   options: ownProps => ({
