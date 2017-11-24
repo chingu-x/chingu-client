@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
 import Navbar from "./Misc/Navbar";
-import LandingPage from "./Home/LandingPage";
+import Home from "./Home/Home";
 import Profile from "./Profile/Profile";
 import SignUp from "./SignUp/SignUp";
 import Login from "./Login/Login";
@@ -15,7 +15,7 @@ class App extends Component {
       <div>
         <Navbar />
 
-        <Route exact path="/" component={LandingPage} />
+        <Route exact path="/" component={Home} />
         <Route path="/profile/:id" component={Profile} />
         <Route path="/signup" component={SignUp} />
         <Route path="/login" component={Login} />

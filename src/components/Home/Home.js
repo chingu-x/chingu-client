@@ -6,7 +6,7 @@ import "./Home.css";
 const { Content } = Layout;
 const Step = Steps.Step;
 
-class LandingPage extends Component {
+class Home extends Component {
   render() {
     return (
       <div>
@@ -86,4 +86,4 @@ class LandingPage extends Component {
   }
 }
 
-export default LandingPage;
+export default Home;
