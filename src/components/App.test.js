@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { shallow } from "enzyme";
 
-import Home from "./Home";
+import App from "./App";
 
-describe("Home Component", () => {
+describe("App Component", () => {
   it("renders without crashing", () => {
-    const wrapper = shallow(<Home />);
+    const wrapper = shallow(<App />);
     expect(wrapper).toMatchSnapshot();
   });
 });
