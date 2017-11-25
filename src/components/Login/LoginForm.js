@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-import gql from "graphql-tag";
 import { Form, Icon, Input, Button, Spin } from "antd";
 
+import loginMutation from "./loginMutation";
 import "./LoginForm.css";
 
 const FormItem = Form.Item;
@@ -99,17 +99,6 @@ class LoginForm extends Component {
   }
 }
 
-const loginMutation = gql`
-  mutation userLogin($email: String!, $password: String!) {
-    signInUser(email: $email, password: $password) {
-      jwt
-      user {
-        id
-      }
-    }
-  }
-`;
-
-const wrappedForm = Form.create()(LoginForm);
+export const wrappedForm = Form.create()(LoginForm);
 
 export default graphql(loginMutation)(wrappedForm);

@@ -1,11 +1,11 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import Home from "./Home";
+import { wrappedForm as LoginForm } from "./LoginForm";
 
-describe("Home Component", () => {
+describe("LoginForm Component", () => {
   it("renders without crashing", () => {
-    const wrapper = shallow(<Home />);
+    const wrapper = shallow(<LoginForm />);
     expect(wrapper).toMatchSnapshot();
   });
 });

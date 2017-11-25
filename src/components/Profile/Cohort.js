@@ -4,10 +4,8 @@ import "./Cohort.css";
 
 const Cohort = props => (
   <div className="cohort">
-    <h4>{props.name}</h4>
-    <p>
-      {props.members} Members
-    </p>
+    <h4 className="cohort-name">{props.name}</h4>
+    <p className="cohort-details">{props.members} Members</p>
   </div>
 );
 

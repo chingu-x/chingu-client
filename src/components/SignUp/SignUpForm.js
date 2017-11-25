@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-import gql from "graphql-tag";
 import { Form, Icon, Input, Button } from "antd";
 
+import registerUser from "./registerUserMutation";
 import "./SignUpForm.css";
 
 const FormItem = Form.Item;
@@ -123,32 +123,6 @@ class SignUpForm extends Component {
   }
 }
 
-const registerUser = gql`
-  mutation registerUser(
-    $first_name: String!
-    $last_name: String!
-    $email: String!
-    $github_url: String!
-    $password: String!
-  ) {
-    createUser(
-      user_data: {
-        first_name: $first_name
-        last_name: $last_name
-        github_url: $github_url
-      }
-      email: $email
-      password: $password
-      email: $email
-    ) {
-      jwt
-      user {
-        id
-      }
-    }
-  }
-`;
-
-const wrappedForm = Form.create()(SignUpForm);
+export const wrappedForm = Form.create()(SignUpForm);
 
 export default graphql(registerUser)(wrappedForm);
