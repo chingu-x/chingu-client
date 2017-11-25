@@ -1,8 +1,9 @@
 import gql from "graphql-tag";
 
 const userDataQuery = gql`
-  query userData($user_id: ID) {
-    user(user_id: $user_id) {
+  query userData {
+    user {
+      id
       first_name
       last_name
       bio
