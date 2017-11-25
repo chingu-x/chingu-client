@@ -23,12 +23,16 @@ export class Navbar extends Component {
     return (
       <Layout>
         <Header className="nav-header">
-          <div className="logo">Chingu</div>
-          <Menu theme="light" mode="horizontal" style={{ lineHeight: "64px" }}>
-            <Menu.Item key="1">
-              <Link to="/">Home</Link>
-            </Menu.Item>
-
+          <div className="logo">
+            <div className="logo-container">
+              <Link to="/">Chingu</Link>
+            </div>
+          </div>
+          <Menu
+            theme="light"
+            mode="horizontal"
+            style={{ lineHeight: "64px", display: "flex" }}
+          >
             {user ? null : (
               <Menu.Item key="2">
                 <Link to="/signup">Sign Up</Link>

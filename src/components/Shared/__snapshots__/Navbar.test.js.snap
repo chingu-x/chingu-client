@@ -32,7 +32,16 @@ ShallowWrapper {
         <div
                 className="logo"
         >
-                Chingu
+                <div
+                        className="logo-container"
+                >
+                        <Link
+                                replace={false}
+                                to="/"
+                        >
+                                Chingu
+                        </Link>
+                </div>
         </div>
         <Menu
                 className=""
@@ -40,19 +49,12 @@ ShallowWrapper {
                 prefixCls="ant-menu"
                 style={
                         Object {
+                                "display": "flex",
                                 "lineHeight": "64px",
                               }
                 }
                 theme="light"
         >
-                <MenuItem>
-                        <Link
-                                replace={false}
-                                to="/"
-                        >
-                                Home
-                        </Link>
-                </MenuItem>
                 <MenuItem>
                         <Link
                                 replace={false}
@@ -89,7 +91,16 @@ ShallowWrapper {
           <div
             className="logo"
 >
-            Chingu
+            <div
+                        className="logo-container"
+            >
+                        <Link
+                                    replace={false}
+                                    to="/"
+                        >
+                                    Chingu
+                        </Link>
+            </div>
 </div>,
           <Menu
             className=""
@@ -97,19 +108,12 @@ ShallowWrapper {
             prefixCls="ant-menu"
             style={
                         Object {
+                                    "display": "flex",
                                     "lineHeight": "64px",
                                   }
             }
             theme="light"
 >
-            <MenuItem>
-                        <Link
-                                    replace={false}
-                                    to="/"
-                        >
-                                    Home
-                        </Link>
-            </MenuItem>
             <MenuItem>
                         <Link
                                     replace={false}
@@ -144,11 +148,48 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "Chingu",
+            "children": <div
+              className="logo-container"
+>
+              <Link
+                            replace={false}
+                            to="/"
+              >
+                            Chingu
+              </Link>
+</div>,
             "className": "logo",
           },
           "ref": null,
-          "rendered": "Chingu",
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <Link
+                replace={false}
+                to="/"
+>
+                Chingu
+</Link>,
+              "className": "logo-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "Chingu",
+                "replace": false,
+                "to": "/",
+              },
+              "ref": null,
+              "rendered": "Chingu",
+              "type": [Function],
+            },
+            "type": "div",
+          },
           "type": "div",
         },
         Object {
@@ -157,14 +198,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": Array [
-              <MenuItem>
-                <Link
-                                replace={false}
-                                to="/"
-                >
-                                Home
-                </Link>
-</MenuItem>,
               null,
               null,
               <MenuItem>
@@ -195,40 +228,13 @@ ShallowWrapper {
             "mode": "horizontal",
             "prefixCls": "ant-menu",
             "style": Object {
+              "display": "flex",
               "lineHeight": "64px",
             },
             "theme": "light",
           },
           "ref": null,
           "rendered": Array [
-            Object {
-              "instance": null,
-              "key": "1",
-              "nodeType": "class",
-              "props": Object {
-                "children": <Link
-                  replace={false}
-                  to="/"
->
-                  Home
-</Link>,
-              },
-              "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Home",
-                  "replace": false,
-                  "to": "/",
-                },
-                "ref": null,
-                "rendered": "Home",
-                "type": [Function],
-              },
-              "type": [Function],
-            },
             null,
             null,
             Object {
@@ -333,7 +339,16 @@ ShallowWrapper {
           <div
                     className="logo"
           >
-                    Chingu
+                    <div
+                              className="logo-container"
+                    >
+                              <Link
+                                        replace={false}
+                                        to="/"
+                              >
+                                        Chingu
+                              </Link>
+                    </div>
           </div>
           <Menu
                     className=""
@@ -341,19 +356,12 @@ ShallowWrapper {
                     prefixCls="ant-menu"
                     style={
                               Object {
+                                        "display": "flex",
                                         "lineHeight": "64px",
                                       }
                     }
                     theme="light"
           >
-                    <MenuItem>
-                              <Link
-                                        replace={false}
-                                        to="/"
-                              >
-                                        Home
-                              </Link>
-                    </MenuItem>
                     <MenuItem>
                               <Link
                                         replace={false}
@@ -390,7 +398,16 @@ ShallowWrapper {
             <div
               className="logo"
 >
-              Chingu
+              <div
+                            className="logo-container"
+              >
+                            <Link
+                                          replace={false}
+                                          to="/"
+                            >
+                                          Chingu
+                            </Link>
+              </div>
 </div>,
             <Menu
               className=""
@@ -398,19 +415,12 @@ ShallowWrapper {
               prefixCls="ant-menu"
               style={
                             Object {
+                                          "display": "flex",
                                           "lineHeight": "64px",
                                         }
               }
               theme="light"
 >
-              <MenuItem>
-                            <Link
-                                          replace={false}
-                                          to="/"
-                            >
-                                          Home
-                            </Link>
-              </MenuItem>
               <MenuItem>
                             <Link
                                           replace={false}
@@ -445,11 +455,48 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": "Chingu",
+              "children": <div
+                className="logo-container"
+>
+                <Link
+                                replace={false}
+                                to="/"
+                >
+                                Chingu
+                </Link>
+</div>,
               "className": "logo",
             },
             "ref": null,
-            "rendered": "Chingu",
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <Link
+                  replace={false}
+                  to="/"
+>
+                  Chingu
+</Link>,
+                "className": "logo-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Chingu",
+                  "replace": false,
+                  "to": "/",
+                },
+                "ref": null,
+                "rendered": "Chingu",
+                "type": [Function],
+              },
+              "type": "div",
+            },
             "type": "div",
           },
           Object {
@@ -458,14 +505,6 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <MenuItem>
-                  <Link
-                                    replace={false}
-                                    to="/"
-                  >
-                                    Home
-                  </Link>
-</MenuItem>,
                 null,
                 null,
                 <MenuItem>
@@ -496,40 +535,13 @@ ShallowWrapper {
               "mode": "horizontal",
               "prefixCls": "ant-menu",
               "style": Object {
+                "display": "flex",
                 "lineHeight": "64px",
               },
               "theme": "light",
             },
             "ref": null,
             "rendered": Array [
-              Object {
-                "instance": null,
-                "key": "1",
-                "nodeType": "class",
-                "props": Object {
-                  "children": <Link
-                    replace={false}
-                    to="/"
->
-                    Home
-</Link>,
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "children": "Home",
-                    "replace": false,
-                    "to": "/",
-                  },
-                  "ref": null,
-                  "rendered": "Home",
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
               null,
               null,
               Object {
