@@ -41,10 +41,4 @@ export class Settings extends Component {
   }
 }
 
-export default graphql(userDataQuery, {
-  options: ownProps => ({
-    variables: {
-      user_id: 1
-    }
-  })
-})(Settings);
+export default graphql(userDataQuery)(Settings);
