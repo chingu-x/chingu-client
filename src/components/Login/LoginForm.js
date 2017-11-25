@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-import gql from "graphql-tag";
 import { Form, Icon, Input, Button, Spin } from "antd";
 
 import loginMutation from "./loginMutation";
