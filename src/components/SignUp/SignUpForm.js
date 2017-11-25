@@ -3,7 +3,7 @@ import { graphql } from "react-apollo";
 import gql from "graphql-tag";
 import { Form, Icon, Input, Button } from "antd";
 
-import "./form.css";
+import "./SignUpForm.css";
 
 const FormItem = Form.Item;
 
@@ -24,7 +24,6 @@ class SignUpForm extends Component {
     this.props.form.validateFields((err, values) => {
       if (!err) {
         let { email, first_name, last_name, github_url, password } = values;
-        console.log(values);
 
         this.props
           .mutate({
@@ -37,9 +36,7 @@ class SignUpForm extends Component {
             }
           })
           .then(({ data }) => {
-            window.localStorage.setItem("user_id", data.createUser.user.id);
             window.localStorage.setItem("token", data.createUser.jwt);
-            console.log(data);
             window.location = "/profile/" + data.createUser.user.id;
           })
           .catch(err => {

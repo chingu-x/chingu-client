@@ -1,27 +1,25 @@
 import React, { Component } from "react";
+import { graphql } from "react-apollo";
 import { Link } from "react-router-dom";
 import { Layout, Menu } from "antd";
 
+import currentUserQuery from "./currentUserQuery";
 import "./Navbar.css";
 
 const { Header } = Layout;
 
-class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      user_id: window.localStorage.getItem("user_id")
-    };
-  }
-
+export class Navbar extends Component {
   handleLogout = e => {
     e.preventDefault();
-    window.localStorage.removeItem("user_id");
     window.localStorage.removeItem("token");
     window.location = "/";
   };
 
   render() {
+    let { loading, user } = this.props.data;
+    if (loading) {
+      return <h1>Loading</h1>;
+    }
     return (
       <Layout>
         <Header className="nav-header">
@@ -31,26 +29,32 @@ class Navbar extends Component {
               <Link to="/">Home</Link>
             </Menu.Item>
 
-            {this.state.user_id ? null : (
+            {user ? null : (
               <Menu.Item key="2">
                 <Link to="/signup">Sign Up</Link>
               </Menu.Item>
             )}
 
-            {this.state.user_id ? null : (
+            {user ? null : (
               <Menu.Item key="3">
                 <Link to="/login">Login</Link>
               </Menu.Item>
             )}
 
-            {this.state.user_id ? (
+            {user ? (
               <Menu.Item key="4">
-                <Link to={`/profile/${this.state.user_id}`}>Profile</Link>
+                <Link to={`/profile/${user.id}`}>Profile</Link>
               </Menu.Item>
             ) : null}
 
-            {this.state.user_id ? (
+            {user ? (
               <Menu.Item key="5">
+                <Link to="/settings">Settings</Link>
+              </Menu.Item>
+            ) : null}
+
+            {user ? (
+              <Menu.Item key="6">
                 <a onClick={this.handleLogout}>Logout</a>
               </Menu.Item>
             ) : null}
@@ -61,4 +65,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default graphql(currentUserQuery)(Navbar);

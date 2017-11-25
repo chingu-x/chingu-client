@@ -3,7 +3,7 @@ import { graphql } from "react-apollo";
 import gql from "graphql-tag";
 import { Form, Icon, Input, Button, Spin } from "antd";
 
-import "./form.css";
+import "./LoginForm.css";
 
 const FormItem = Form.Item;
 
@@ -35,7 +35,6 @@ class LoginForm extends Component {
             }
           })
           .then(({ data }) => {
-            window.localStorage.setItem("user_id", data.signInUser.user.id);
             window.localStorage.setItem("token", data.signInUser.jwt);
             this.setState({
               loading: false

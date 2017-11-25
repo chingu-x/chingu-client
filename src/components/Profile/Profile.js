@@ -4,7 +4,7 @@ import { Row, Col, Layout, Spin } from "antd";
 
 import Project from "./Project";
 import Cohort from "./Cohort";
-import userQuery from "./query";
+import profileQuery from "./profileQuery";
 import "./Profile.css";
 
 const { Content } = Layout;
@@ -15,7 +15,7 @@ export class Profile extends Component {
     if (loading) {
       return (
         <Content>
-          <div className="spinner">
+          <div className="text-center">
             <Spin />
           </div>
         </Content>
@@ -110,7 +110,7 @@ export class Profile extends Component {
   }
 }
 
-export default graphql(userQuery, {
+export default graphql(profileQuery, {
   options: ownProps => ({
     variables: {
       userId: ownProps.match.params.id

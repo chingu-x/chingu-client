@@ -1,12 +1,11 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { shallow } from "enzyme";
 
-import App from "./App";
+import Footer from "./MainFooter";
 
-describe("App Component", () => {
+describe("Footer Component", () => {
   it("renders without crashing", () => {
-    const wrapper = shallow(<App />);
+    const wrapper = shallow(<Footer />);
     expect(wrapper).toMatchSnapshot();
   });
 });
