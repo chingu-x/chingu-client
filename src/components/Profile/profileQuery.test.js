@@ -1,5 +1,7 @@
 import profileQuery from "./profileQuery";
 
-it("should be the correct query", () => {
-  expect(profileQuery).toMatchSnapshot();
+describe("profileQuery", () => {
+  it("should be the correct query", () => {
+    expect(profileQuery).toMatchSnapshot();
+  });
 });
