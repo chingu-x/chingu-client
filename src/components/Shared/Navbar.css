@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #e9e9e9;
+  padding: 0;
 }
 
 .nav-header .logo {
@@ -11,6 +12,10 @@
   height: 31px;
   font-size: 2rem;
   font-weight: 600;
+}
+
+.nav-header .logo .logo-container {
+  margin-left: 1rem;
 }
 
 .nav-header .ant-menu-horizontal {
