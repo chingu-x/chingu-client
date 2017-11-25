@@ -15,7 +15,7 @@ export class Profile extends Component {
     if (loading) {
       return (
         <Content>
-          <div className="spinner">
+          <div className="text-center">
             <Spin />
           </div>
         </Content>
