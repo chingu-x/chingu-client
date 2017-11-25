@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import Navbar from "./Shared/Navbar";
 import Home from "./Home/Home";
 import Profile from "./Profile/Profile";
-import Settings from "./Profile/Settings";
+import Settings from "./Settings/Settings";
 import SignUp from "./SignUp/SignUp";
 import Login from "./Login/Login";
 import Footer from "./Shared/MainFooter";
