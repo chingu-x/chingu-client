@@ -30,8 +30,8 @@ export class Settings extends Component {
       <Content>
         <div className="settings">
           <h1 className="text-center">Update your settings and profile</h1>
-          <Row type="flex" justify="center">
-            <Col sm={22} md={18} lg={16}>
+          <Row type="flex" justify="center" style={{ marginTop: "3rem" }}>
+            <Col sm={16} md={14} lg={14} offset={4}>
               <SettingsForm {...user} />
             </Col>
           </Row>

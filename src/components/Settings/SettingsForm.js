@@ -86,7 +86,7 @@ class SettingsForm extends Component {
             <FormItem
               label="First name"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("first_name", {
                 rules: [
@@ -100,7 +100,7 @@ class SettingsForm extends Component {
             <FormItem
               label="Last name"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("last_name", {
                 rules: [
@@ -114,7 +114,7 @@ class SettingsForm extends Component {
             <FormItem
               label="Bio"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("bio")(<Input.TextArea rows={4} />)}
             </FormItem>
@@ -130,7 +130,7 @@ class SettingsForm extends Component {
             <FormItem
               label="GitHub"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("github_url", {
                 rules: [
@@ -144,7 +144,7 @@ class SettingsForm extends Component {
             <FormItem
               label="Twitter"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("twitter_url")(
                 <Input placeholder="https://twitter.com/Chingu-collabs" />
@@ -153,7 +153,7 @@ class SettingsForm extends Component {
             <FormItem
               label="LinkedIn"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("linkedin_url")(
                 <Input placeholder="https://linkedin.com/chingu" />
@@ -162,7 +162,7 @@ class SettingsForm extends Component {
             <FormItem
               label="Portfolio"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("portfolio_url")(
                 <Input placeholder="https://portfolio.com" />
@@ -171,7 +171,7 @@ class SettingsForm extends Component {
             <FormItem
               label="Website"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("website_url")(
                 <Input placeholder="https://chingu.io" />
@@ -180,7 +180,7 @@ class SettingsForm extends Component {
             <FormItem
               label="Blog"
               labelCol={{ span: 4 }}
-              wrapperCol={{ span: 8 }}
+              wrapperCol={{ span: 10 }}
             >
               {getFieldDecorator("blog_url")(
                 <Input placeholder="https://medium.com/chingu" />
