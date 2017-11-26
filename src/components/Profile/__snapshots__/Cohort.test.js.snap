@@ -5,8 +5,27 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Cohort
-    members={1000}
-    name="Voyage X"
+    teams={
+        Array [
+            Object {
+              "id": 1,
+            },
+            Object {
+              "id": 2,
+            },
+          ]
+    }
+    title="Voyage X"
+    users={
+        Array [
+            Object {
+              "id": 1,
+            },
+            Object {
+              "id": 2,
+            },
+          ]
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -29,8 +48,10 @@ ShallowWrapper {
         <p
           className="cohort-details"
 >
-          1000
-           Members
+          2
+           Members, 
+          2
+           Teams
 </p>,
       ],
       "className": "cohort",
@@ -55,15 +76,19 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            1000,
-            " Members",
+            2,
+            " Members, ",
+            2,
+            " Teams",
           ],
           "className": "cohort-details",
         },
         "ref": null,
         "rendered": Array [
-          1000,
-          " Members",
+          2,
+          " Members, ",
+          2,
+          " Teams",
         ],
         "type": "p",
       },
@@ -85,8 +110,10 @@ ShallowWrapper {
           <p
             className="cohort-details"
 >
-            1000
-             Members
+            2
+             Members, 
+            2
+             Teams
 </p>,
         ],
         "className": "cohort",
@@ -111,15 +138,19 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              1000,
-              " Members",
+              2,
+              " Members, ",
+              2,
+              " Teams",
             ],
             "className": "cohort-details",
           },
           "ref": null,
           "rendered": Array [
-            1000,
-            " Members",
+            2,
+            " Members, ",
+            2,
+            " Teams",
           ],
           "type": "p",
         },

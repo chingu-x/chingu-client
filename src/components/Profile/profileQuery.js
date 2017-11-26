@@ -21,8 +21,12 @@ const userQuery = gql`
         }
       }
       cohorts {
+        title
         users {
-          username
+          id
+        }
+        teams {
+          id
         }
       }
     }

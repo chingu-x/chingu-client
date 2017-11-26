@@ -5,8 +5,23 @@ import Cohort from "./Cohort";
 
 describe("Cohort Component", () => {
   const props = {
-    name: "Voyage X",
-    members: 1000
+    title: "Voyage X",
+    users: [
+      {
+        id: 1
+      },
+      {
+        id: 2
+      }
+    ],
+    teams: [
+      {
+        id: 1
+      },
+      {
+        id: 2
+      }
+    ]
   };
 
   it("renders without crashing", () => {
