@@ -40,7 +40,7 @@ export class Profile extends Component {
           <Row type="flex" justify="center">
             <Col sm={24} md={8} lg={6}>
               <img
-                src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                src={`https://api.adorable.io/avatars/250/${user.email}.png`}
                 alt="Avatar"
               />
               <p className="text-center">
