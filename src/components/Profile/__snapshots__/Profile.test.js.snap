@@ -57,7 +57,7 @@ ShallowWrapper {
                     >
                               <img
                                         alt="Avatar"
-                                        src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                                        src="https://api.adorable.io/avatars/250/undefined.png"
                               />
                               <p
                                         className="text-center"
@@ -151,7 +151,7 @@ ShallowWrapper {
             >
                         <img
                                     alt="Avatar"
-                                    src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                                    src="https://api.adorable.io/avatars/250/undefined.png"
                         />
                         <p
                                     className="text-center"
@@ -204,7 +204,7 @@ ShallowWrapper {
 >
                 <img
                                 alt="Avatar"
-                                src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                                src="https://api.adorable.io/avatars/250/undefined.png"
                 />
                 <p
                                 className="text-center"
@@ -252,7 +252,7 @@ ShallowWrapper {
                 "children": Array [
                   <img
                     alt="Avatar"
-                    src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                    src="https://api.adorable.io/avatars/250/undefined.png"
 />,
                   <p
                     className="text-center"
@@ -272,7 +272,7 @@ ShallowWrapper {
                   "nodeType": "host",
                   "props": Object {
                     "alt": "Avatar",
-                    "src": "https://avatars2.githubusercontent.com/u/25523682?s=460&v=4",
+                    "src": "https://api.adorable.io/avatars/250/undefined.png",
                   },
                   "ref": null,
                   "rendered": null,
@@ -628,7 +628,7 @@ ShallowWrapper {
                         >
                                     <img
                                                 alt="Avatar"
-                                                src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                                                src="https://api.adorable.io/avatars/250/undefined.png"
                                     />
                                     <p
                                                 className="text-center"
@@ -722,7 +722,7 @@ ShallowWrapper {
               >
                             <img
                                           alt="Avatar"
-                                          src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                                          src="https://api.adorable.io/avatars/250/undefined.png"
                             />
                             <p
                                           className="text-center"
@@ -775,7 +775,7 @@ ShallowWrapper {
 >
                   <img
                                     alt="Avatar"
-                                    src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                                    src="https://api.adorable.io/avatars/250/undefined.png"
                   />
                   <p
                                     className="text-center"
@@ -823,7 +823,7 @@ ShallowWrapper {
                   "children": Array [
                     <img
                       alt="Avatar"
-                      src="https://avatars2.githubusercontent.com/u/25523682?s=460&v=4"
+                      src="https://api.adorable.io/avatars/250/undefined.png"
 />,
                     <p
                       className="text-center"
@@ -843,7 +843,7 @@ ShallowWrapper {
                     "nodeType": "host",
                     "props": Object {
                       "alt": "Avatar",
-                      "src": "https://avatars2.githubusercontent.com/u/25523682?s=460&v=4",
+                      "src": "https://api.adorable.io/avatars/250/undefined.png",
                     },
                     "ref": null,
                     "rendered": null,
