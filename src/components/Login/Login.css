@@ -1,0 +1,5 @@
+.login {
+  background: url(/img/login.png) repeat center center fixed;
+  padding: 5rem;
+  min-height: 80vh;
+}

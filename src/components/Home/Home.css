@@ -1,0 +1,21 @@
+.chingu-logo {
+  display: flex;
+  margin: 0 auto;
+}
+
+.subtitle {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+@media (max-width: 992px) {
+  .horizontal-steps {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .vertical-steps {
+    display: none;
+  }
+}

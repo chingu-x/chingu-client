@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Cohort Component renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Cohort
+    teams={
+        Array [
+            Object {
+              "id": 1,
+            },
+            Object {
+              "id": 2,
+            },
+          ]
+    }
+    title="Voyage X"
+    users={
+        Array [
+            Object {
+              "id": 1,
+            },
+            Object {
+              "id": 2,
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h4
+          className="cohort-name"
+>
+          Voyage X
+</h4>,
+        <p
+          className="cohort-details"
+>
+          2
+           Members, 
+          2
+           Teams
+</p>,
+      ],
+      "className": "cohort",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Voyage X",
+          "className": "cohort-name",
+        },
+        "ref": null,
+        "rendered": "Voyage X",
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            2,
+            " Members, ",
+            2,
+            " Teams",
+          ],
+          "className": "cohort-details",
+        },
+        "ref": null,
+        "rendered": Array [
+          2,
+          " Members, ",
+          2,
+          " Teams",
+        ],
+        "type": "p",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h4
+            className="cohort-name"
+>
+            Voyage X
+</h4>,
+          <p
+            className="cohort-details"
+>
+            2
+             Members, 
+            2
+             Teams
+</p>,
+        ],
+        "className": "cohort",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Voyage X",
+            "className": "cohort-name",
+          },
+          "ref": null,
+          "rendered": "Voyage X",
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              2,
+              " Members, ",
+              2,
+              " Teams",
+            ],
+            "className": "cohort-details",
+          },
+          "ref": null,
+          "rendered": Array [
+            2,
+            " Members, ",
+            2,
+            " Teams",
+          ],
+          "type": "p",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

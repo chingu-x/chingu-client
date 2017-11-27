@@ -1,0 +1,1184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile component renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Profile
+    data={
+        Object {
+            "user": Object {
+              "cohorts": Array [],
+              "first_name": "Andrés",
+              "github_url": "https://github.com",
+              "last_name": "Pérez",
+              "projects": Array [],
+            },
+          }
+    }
+    match={
+        Object {
+            "params": Object {
+              "id": 1,
+            },
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <div
+          className="section header"
+          style={
+                    Object {
+                              "marginTop": "3rem",
+                            }
+          }
+>
+          <Row
+                    gutter={0}
+                    justify="center"
+                    type="flex"
+          >
+                    <Col
+                              lg={6}
+                              md={8}
+                              sm={24}
+                    >
+                              <img
+                                        alt="Avatar"
+                                        src="https://api.adorable.io/avatars/250/undefined.png"
+                              />
+                              <p
+                                        className="text-center"
+                              >
+                                        No location provided
+                              </p>
+                    </Col>
+                    <Col
+                              lg={18}
+                              md={16}
+                              sm={24}
+                    >
+                              <h2>
+                                        Andrés
+                                         
+                                        Pérez
+                              </h2>
+                              <ul>
+                                        <li>
+                                                  <a
+                                                            href="https://github.com"
+                                                  >
+                                                            GitHub
+                                                  </a>
+                                        </li>
+                              </ul>
+                              <p
+                                        className="bio"
+                              >
+                                        User does not have a bio yet.
+                              </p>
+                    </Col>
+          </Row>
+</div>,
+        <div
+          className="section profile-content"
+>
+          <Row
+                    gutter={16}
+                    justify="center"
+                    type="flex"
+          >
+                    <Col
+                              md={16}
+                              sm={24}
+                    >
+                              <h3>
+                                        Projects
+                              </h3>
+                              <Row
+                                        gutter={16}
+                                        type="flex"
+                              >
+                                        User doesn't have any projects.
+                              </Row>
+                    </Col>
+                    <Col
+                              md={8}
+                              sm={24}
+                    >
+                              <h3>
+                                        Cohorts
+                              </h3>
+                              <Row
+                                        gutter={16}
+                                        type="flex"
+                              >
+                                        User hasn't been part of any cohorts.
+                              </Row>
+                    </Col>
+          </Row>
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Row
+            gutter={0}
+            justify="center"
+            type="flex"
+>
+            <Col
+                        lg={6}
+                        md={8}
+                        sm={24}
+            >
+                        <img
+                                    alt="Avatar"
+                                    src="https://api.adorable.io/avatars/250/undefined.png"
+                        />
+                        <p
+                                    className="text-center"
+                        >
+                                    No location provided
+                        </p>
+            </Col>
+            <Col
+                        lg={18}
+                        md={16}
+                        sm={24}
+            >
+                        <h2>
+                                    Andrés
+                                     
+                                    Pérez
+                        </h2>
+                        <ul>
+                                    <li>
+                                                <a
+                                                            href="https://github.com"
+                                                >
+                                                            GitHub
+                                                </a>
+                                    </li>
+                        </ul>
+                        <p
+                                    className="bio"
+                        >
+                                    User does not have a bio yet.
+                        </p>
+            </Col>
+</Row>,
+          "className": "section header",
+          "style": Object {
+            "marginTop": "3rem",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Col
+                lg={6}
+                md={8}
+                sm={24}
+>
+                <img
+                                alt="Avatar"
+                                src="https://api.adorable.io/avatars/250/undefined.png"
+                />
+                <p
+                                className="text-center"
+                >
+                                No location provided
+                </p>
+</Col>,
+              <Col
+                lg={18}
+                md={16}
+                sm={24}
+>
+                <h2>
+                                Andrés
+                                 
+                                Pérez
+                </h2>
+                <ul>
+                                <li>
+                                                <a
+                                                                href="https://github.com"
+                                                >
+                                                                GitHub
+                                                </a>
+                                </li>
+                </ul>
+                <p
+                                className="bio"
+                >
+                                User does not have a bio yet.
+                </p>
+</Col>,
+            ],
+            "gutter": 0,
+            "justify": "center",
+            "type": "flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <img
+                    alt="Avatar"
+                    src="https://api.adorable.io/avatars/250/undefined.png"
+/>,
+                  <p
+                    className="text-center"
+>
+                    No location provided
+</p>,
+                ],
+                "lg": 6,
+                "md": 8,
+                "sm": 24,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "alt": "Avatar",
+                    "src": "https://api.adorable.io/avatars/250/undefined.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "img",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "No location provided",
+                    "className": "text-center",
+                  },
+                  "ref": null,
+                  "rendered": "No location provided",
+                  "type": "p",
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <h2>
+                    Andrés
+                     
+                    Pérez
+</h2>,
+                  <ul>
+                    <li>
+                                        <a
+                                                            href="https://github.com"
+                                        >
+                                                            GitHub
+                                        </a>
+                    </li>
+</ul>,
+                  <p
+                    className="bio"
+>
+                    User does not have a bio yet.
+</p>,
+                ],
+                "lg": 18,
+                "md": 16,
+                "sm": 24,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      "Andrés",
+                      " ",
+                      "Pérez",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "Andrés",
+                    " ",
+                    "Pérez",
+                  ],
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      <li>
+                        <a
+                                                href="https://github.com"
+                        >
+                                                GitHub
+                        </a>
+</li>,
+                      null,
+                      null,
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "host",
+                      "props": Object {
+                        "children": <a
+                          href="https://github.com"
+>
+                          GitHub
+</a>,
+                      },
+                      "ref": null,
+                      "rendered": Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": "GitHub",
+                          "href": "https://github.com",
+                        },
+                        "ref": null,
+                        "rendered": "GitHub",
+                        "type": "a",
+                      },
+                      "type": "li",
+                    },
+                    null,
+                    null,
+                  ],
+                  "type": "ul",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "User does not have a bio yet.",
+                    "className": "bio",
+                  },
+                  "ref": null,
+                  "rendered": "User does not have a bio yet.",
+                  "type": "p",
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Row
+            gutter={16}
+            justify="center"
+            type="flex"
+>
+            <Col
+                        md={16}
+                        sm={24}
+            >
+                        <h3>
+                                    Projects
+                        </h3>
+                        <Row
+                                    gutter={16}
+                                    type="flex"
+                        >
+                                    User doesn't have any projects.
+                        </Row>
+            </Col>
+            <Col
+                        md={8}
+                        sm={24}
+            >
+                        <h3>
+                                    Cohorts
+                        </h3>
+                        <Row
+                                    gutter={16}
+                                    type="flex"
+                        >
+                                    User hasn't been part of any cohorts.
+                        </Row>
+            </Col>
+</Row>,
+          "className": "section profile-content",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Col
+                md={16}
+                sm={24}
+>
+                <h3>
+                                Projects
+                </h3>
+                <Row
+                                gutter={16}
+                                type="flex"
+                >
+                                User doesn't have any projects.
+                </Row>
+</Col>,
+              <Col
+                md={8}
+                sm={24}
+>
+                <h3>
+                                Cohorts
+                </h3>
+                <Row
+                                gutter={16}
+                                type="flex"
+                >
+                                User hasn't been part of any cohorts.
+                </Row>
+</Col>,
+            ],
+            "gutter": 16,
+            "justify": "center",
+            "type": "flex",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Projects
+</h3>,
+                  <Row
+                    gutter={16}
+                    type="flex"
+>
+                    User doesn't have any projects.
+</Row>,
+                ],
+                "md": 16,
+                "sm": 24,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Projects",
+                  },
+                  "ref": null,
+                  "rendered": "Projects",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "User doesn't have any projects.",
+                    "gutter": 16,
+                    "type": "flex",
+                  },
+                  "ref": null,
+                  "rendered": "User doesn't have any projects.",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    Cohorts
+</h3>,
+                  <Row
+                    gutter={16}
+                    type="flex"
+>
+                    User hasn't been part of any cohorts.
+</Row>,
+                ],
+                "md": 8,
+                "sm": 24,
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Cohorts",
+                  },
+                  "ref": null,
+                  "rendered": "Cohorts",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "User hasn't been part of any cohorts.",
+                    "gutter": 16,
+                    "type": "flex",
+                  },
+                  "ref": null,
+                  "rendered": "User hasn't been part of any cohorts.",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <div
+            className="section header"
+            style={
+                        Object {
+                                    "marginTop": "3rem",
+                                  }
+            }
+>
+            <Row
+                        gutter={0}
+                        justify="center"
+                        type="flex"
+            >
+                        <Col
+                                    lg={6}
+                                    md={8}
+                                    sm={24}
+                        >
+                                    <img
+                                                alt="Avatar"
+                                                src="https://api.adorable.io/avatars/250/undefined.png"
+                                    />
+                                    <p
+                                                className="text-center"
+                                    >
+                                                No location provided
+                                    </p>
+                        </Col>
+                        <Col
+                                    lg={18}
+                                    md={16}
+                                    sm={24}
+                        >
+                                    <h2>
+                                                Andrés
+                                                 
+                                                Pérez
+                                    </h2>
+                                    <ul>
+                                                <li>
+                                                            <a
+                                                                        href="https://github.com"
+                                                            >
+                                                                        GitHub
+                                                            </a>
+                                                </li>
+                                    </ul>
+                                    <p
+                                                className="bio"
+                                    >
+                                                User does not have a bio yet.
+                                    </p>
+                        </Col>
+            </Row>
+</div>,
+          <div
+            className="section profile-content"
+>
+            <Row
+                        gutter={16}
+                        justify="center"
+                        type="flex"
+            >
+                        <Col
+                                    md={16}
+                                    sm={24}
+                        >
+                                    <h3>
+                                                Projects
+                                    </h3>
+                                    <Row
+                                                gutter={16}
+                                                type="flex"
+                                    >
+                                                User doesn't have any projects.
+                                    </Row>
+                        </Col>
+                        <Col
+                                    md={8}
+                                    sm={24}
+                        >
+                                    <h3>
+                                                Cohorts
+                                    </h3>
+                                    <Row
+                                                gutter={16}
+                                                type="flex"
+                                    >
+                                                User hasn't been part of any cohorts.
+                                    </Row>
+                        </Col>
+            </Row>
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Row
+              gutter={0}
+              justify="center"
+              type="flex"
+>
+              <Col
+                            lg={6}
+                            md={8}
+                            sm={24}
+              >
+                            <img
+                                          alt="Avatar"
+                                          src="https://api.adorable.io/avatars/250/undefined.png"
+                            />
+                            <p
+                                          className="text-center"
+                            >
+                                          No location provided
+                            </p>
+              </Col>
+              <Col
+                            lg={18}
+                            md={16}
+                            sm={24}
+              >
+                            <h2>
+                                          Andrés
+                                           
+                                          Pérez
+                            </h2>
+                            <ul>
+                                          <li>
+                                                        <a
+                                                                      href="https://github.com"
+                                                        >
+                                                                      GitHub
+                                                        </a>
+                                          </li>
+                            </ul>
+                            <p
+                                          className="bio"
+                            >
+                                          User does not have a bio yet.
+                            </p>
+              </Col>
+</Row>,
+            "className": "section header",
+            "style": Object {
+              "marginTop": "3rem",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Col
+                  lg={6}
+                  md={8}
+                  sm={24}
+>
+                  <img
+                                    alt="Avatar"
+                                    src="https://api.adorable.io/avatars/250/undefined.png"
+                  />
+                  <p
+                                    className="text-center"
+                  >
+                                    No location provided
+                  </p>
+</Col>,
+                <Col
+                  lg={18}
+                  md={16}
+                  sm={24}
+>
+                  <h2>
+                                    Andrés
+                                     
+                                    Pérez
+                  </h2>
+                  <ul>
+                                    <li>
+                                                      <a
+                                                                        href="https://github.com"
+                                                      >
+                                                                        GitHub
+                                                      </a>
+                                    </li>
+                  </ul>
+                  <p
+                                    className="bio"
+                  >
+                                    User does not have a bio yet.
+                  </p>
+</Col>,
+              ],
+              "gutter": 0,
+              "justify": "center",
+              "type": "flex",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <img
+                      alt="Avatar"
+                      src="https://api.adorable.io/avatars/250/undefined.png"
+/>,
+                    <p
+                      className="text-center"
+>
+                      No location provided
+</p>,
+                  ],
+                  "lg": 6,
+                  "md": 8,
+                  "sm": 24,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "alt": "Avatar",
+                      "src": "https://api.adorable.io/avatars/250/undefined.png",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "img",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "No location provided",
+                      "className": "text-center",
+                    },
+                    "ref": null,
+                    "rendered": "No location provided",
+                    "type": "p",
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <h2>
+                      Andrés
+                       
+                      Pérez
+</h2>,
+                    <ul>
+                      <li>
+                                            <a
+                                                                  href="https://github.com"
+                                            >
+                                                                  GitHub
+                                            </a>
+                      </li>
+</ul>,
+                    <p
+                      className="bio"
+>
+                      User does not have a bio yet.
+</p>,
+                  ],
+                  "lg": 18,
+                  "md": 16,
+                  "sm": 24,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        "Andrés",
+                        " ",
+                        "Pérez",
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "Andrés",
+                      " ",
+                      "Pérez",
+                    ],
+                    "type": "h2",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": Array [
+                        <li>
+                          <a
+                                                    href="https://github.com"
+                          >
+                                                    GitHub
+                          </a>
+</li>,
+                        null,
+                        null,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": <a
+                            href="https://github.com"
+>
+                            GitHub
+</a>,
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": "GitHub",
+                            "href": "https://github.com",
+                          },
+                          "ref": null,
+                          "rendered": "GitHub",
+                          "type": "a",
+                        },
+                        "type": "li",
+                      },
+                      null,
+                      null,
+                    ],
+                    "type": "ul",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "User does not have a bio yet.",
+                      "className": "bio",
+                    },
+                    "ref": null,
+                    "rendered": "User does not have a bio yet.",
+                    "type": "p",
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Row
+              gutter={16}
+              justify="center"
+              type="flex"
+>
+              <Col
+                            md={16}
+                            sm={24}
+              >
+                            <h3>
+                                          Projects
+                            </h3>
+                            <Row
+                                          gutter={16}
+                                          type="flex"
+                            >
+                                          User doesn't have any projects.
+                            </Row>
+              </Col>
+              <Col
+                            md={8}
+                            sm={24}
+              >
+                            <h3>
+                                          Cohorts
+                            </h3>
+                            <Row
+                                          gutter={16}
+                                          type="flex"
+                            >
+                                          User hasn't been part of any cohorts.
+                            </Row>
+              </Col>
+</Row>,
+            "className": "section profile-content",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Col
+                  md={16}
+                  sm={24}
+>
+                  <h3>
+                                    Projects
+                  </h3>
+                  <Row
+                                    gutter={16}
+                                    type="flex"
+                  >
+                                    User doesn't have any projects.
+                  </Row>
+</Col>,
+                <Col
+                  md={8}
+                  sm={24}
+>
+                  <h3>
+                                    Cohorts
+                  </h3>
+                  <Row
+                                    gutter={16}
+                                    type="flex"
+                  >
+                                    User hasn't been part of any cohorts.
+                  </Row>
+</Col>,
+              ],
+              "gutter": 16,
+              "justify": "center",
+              "type": "flex",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <h3>
+                      Projects
+</h3>,
+                    <Row
+                      gutter={16}
+                      type="flex"
+>
+                      User doesn't have any projects.
+</Row>,
+                  ],
+                  "md": 16,
+                  "sm": 24,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Projects",
+                    },
+                    "ref": null,
+                    "rendered": "Projects",
+                    "type": "h3",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "User doesn't have any projects.",
+                      "gutter": 16,
+                      "type": "flex",
+                    },
+                    "ref": null,
+                    "rendered": "User doesn't have any projects.",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <h3>
+                      Cohorts
+</h3>,
+                    <Row
+                      gutter={16}
+                      type="flex"
+>
+                      User hasn't been part of any cohorts.
+</Row>,
+                  ],
+                  "md": 8,
+                  "sm": 24,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Cohorts",
+                    },
+                    "ref": null,
+                    "rendered": "Cohorts",
+                    "type": "h3",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "User hasn't been part of any cohorts.",
+                      "gutter": 16,
+                      "type": "flex",
+                    },
+                    "ref": null,
+                    "rendered": "User hasn't been part of any cohorts.",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
