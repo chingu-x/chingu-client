@@ -12,7 +12,7 @@ import App from "./components/App";
 import registerServiceWorker from "./registerServiceWorker";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:5000/graphql"
+  uri: "https://chingu-api.herokuapp.com/graphql"
 });
 
 const middlewareAuth = new ApolloLink((operation, forward) => {

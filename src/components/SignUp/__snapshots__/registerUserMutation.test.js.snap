@@ -99,20 +99,6 @@ Object {
                   },
                 },
               },
-              Object {
-                "kind": "Argument",
-                "name": Object {
-                  "kind": "Name",
-                  "value": "email",
-                },
-                "value": Object {
-                  "kind": "Variable",
-                  "name": Object {
-                    "kind": "Name",
-                    "value": "email",
-                  },
-                },
-              },
             ],
             "directives": Array [],
             "kind": "Field",
@@ -276,7 +262,7 @@ Object {
   ],
   "kind": "Document",
   "loc": Object {
-    "end": 412,
+    "end": 392,
     "start": 0,
   },
 }

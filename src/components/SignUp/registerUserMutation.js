@@ -16,7 +16,6 @@ const registerUser = gql`
       }
       email: $email
       password: $password
-      email: $email
     ) {
       jwt
       user {
