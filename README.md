@@ -11,3 +11,7 @@ rules of the generator will apply to this project as well.
 1. Clone the repository.
 2. Modify the GraphQL URI in (/src/index.js)[/src/index.js].
 3. Start the server `$ npm start`.
+
+## Building
+
+To generate a production build, run: `$ npm build`
