@@ -14,7 +14,8 @@ class SignUpForm extends Component {
       first_name: "",
       last_name: "",
       email: "",
-      password: ""
+      password: "",
+      userName: ""
     };
   }
 
@@ -23,7 +24,7 @@ class SignUpForm extends Component {
 
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        let { email, first_name, last_name, github_url, password } = values;
+        let { email, first_name, last_name, github_url, password, userName } = values;
 
         this.props
           .mutate({
@@ -32,7 +33,8 @@ class SignUpForm extends Component {
               first_name,
               last_name,
               github_url,
-              password
+              password,
+              userName,
             }
           })
           .then(({ data }) => {
@@ -58,6 +60,19 @@ class SignUpForm extends Component {
               prefix={<Icon type="global" style={{ fontSize: 13 }} />}
               type="email"
               placeholder="Email"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator("username", {
+            rules: [
+              { required: true, message: "Please input your username!" }
+            ]
+          })(
+            <Input
+              prefix={<Icon type="user" style={{ fontSize: 13 }} />}
+              type="text"
+              placeholder="User Name"
             />
           )}
         </FormItem>
@@ -106,6 +121,17 @@ class SignUpForm extends Component {
               prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
               type="password"
               placeholder="Password"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator("passwordVerify", {
+            rules: [{ required: true, message: "Please verify your password!" }]
+          })(
+            <Input
+              prefix={<Icon type="lock" style={{ fontSize: 13 }} />}
+              type="password"
+              placeholder="Verify Password"
             />
           )}
         </FormItem>

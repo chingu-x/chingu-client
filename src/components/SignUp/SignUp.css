@@ -1,5 +1,35 @@
 .signup {
-  background: url(/img/signup.png) repeat center center fixed;
+  background: white;
   padding: 5rem;
   min-height: 80vh;
+}
+
+.signup-box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 3px solid #15df89;
+  box-shadow: 10px 10px 2px #15df89;
+}
+
+.signup-box > h1 {
+  width: 100%;
+  padding: 0 0.5em;
+  border-bottom: 3px solid #15df89;
+  color: #2fd180;
+  text-align: center;
+}
+
+.signup-box > h3 {
+  width: 100%;
+  padding: 0.5em 0.5em;
+  border-bottom: 3px solid #15df89;
+  color: #000;
+  text-align: center;
+}
+
+.signup-lower {
+  padding: 1em;
 }
